@@ -1,0 +1,262 @@
+/* Include padding and borders in element widths. */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #f3f7ff;
+  color: #172554;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.7;
+}
+
+/* Keep the content centered with room around it. */
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 100px 32px;
+}
+
+h1 {
+  margin: 0 0 28px;
+  font-size: 4rem;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+
+p {
+  max-width: 650px;
+  margin: 0 0 20px;
+  color: #475569;
+  font-size: 1.2rem;
+}
+
+a {
+  color: #1d4ed8;
+}
+
+a:hover {
+  text-decoration-thickness: 3px;
+}
+
+a:focus-visible {
+  outline: 3px solid #1d4ed8;
+  outline-offset: 5px;
+}
+
+/* Adjust spacing and heading size on smaller screens. */
+@media (max-width: 600px) {
+  main {
+    padding: 60px 24px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+.site-header {
+  background: #ffffff;
+  border-bottom: 1px solid #dce5f2;
+}
+
+.navbar {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.logo {
+  color: #172554;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.nav-links a {
+  padding: 6px 0;
+  color: #475569;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-links a:hover,
+.nav-links a[aria-current="page"] {
+  color: #1d4ed8;
+  border-bottom-color: #1d4ed8;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 16px 24px;
+  }
+}
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.project-card {
+  padding: 28px;
+  background: #ffffff;
+  border: 1px solid #dce5f2;
+  border-top: 4px solid #1d4ed8;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(23, 37, 84, 0.06);
+}
+
+.project-card h2 {
+  margin: 0 0 16px;
+  font-size: 1.35rem;
+  line-height: 1.3;
+}
+
+.project-card p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+@media (max-width: 850px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.project-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: contain;
+  background: #f3f7ff;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+.project-images {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.project-images img {
+  margin: 0;
+}
+
+.email-link {
+  display: inline-block;
+  padding: 14px 24px;
+  background: #1d4ed8;
+  color: #ffffff;
+  border-radius: 10px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.email-link:hover {
+  background: #1e40af;
+}
+
+.contact-note {
+  margin-top: 20px;
+  font-size: 0.95rem;
+}
+
+
+.menu-toggle {
+  display: none;
+  padding: 10px 16px;
+  background: #ffffff;
+  color: #172554;
+  border: 1px solid #1d4ed8;
+  border-radius: 8px;
+  font: inherit;
+  cursor: pointer;
+}
+
+.menu-toggle:focus-visible {
+  outline: 3px solid #1d4ed8;
+  outline-offset: 4px;
+}
+
+@media (max-width: 600px) {
+  .navbar.menu-ready .menu-toggle {
+    display: block;
+  }
+
+  .navbar.menu-ready .nav-links {
+    display: none;
+    flex-basis: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .navbar.menu-ready .nav-links.is-open {
+    display: flex;
+  }
+}
+.image-preview {
+  width: 100%;
+  padding: 0;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  cursor: zoom-in;
+}
+
+#image-dialog {
+  width: min(1000px, calc(100vw - 32px));
+  max-height: 90vh;
+  padding: 20px;
+  border: 0;
+  border-radius: 16px;
+  background: #ffffff;
+}
+
+#image-dialog::backdrop {
+  background: rgba(15, 23, 42, 0.8);
+}
+
+#image-dialog form {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#full-image {
+  display: block;
+  max-width: 100%;
+  max-height: 70vh;
+  width: auto;
+  height: auto;
+  margin: 16px auto 0;
+}
+
+.image-close {
+  padding: 10px 18px;
+  border: 0;
+  border-radius: 8px;
+  background: #1d4ed8;
+  color: #ffffff;
+  font: inherit;
+  cursor: pointer;
+}
+
+.image-preview:focus-visible,
+.image-close:focus-visible {
+  outline: 3px solid #1d4ed8;
+  outline-offset: 4px;
+}
