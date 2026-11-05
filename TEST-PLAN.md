@@ -14,5 +14,5 @@ For failures, describe the problem and record the result after fixing it.
 | Popup focus | Open and close an image using the keyboard. | Focus returns to the image button after closing. | Pass |
 | Contact | Check the email link. | It addresses a draft to sm3996@njit.edu when an email app is configured. | Pass |
 | Image sizes | Inspect all project image files. | Every image is below 500 KB. | Pass |
-| Accessibility | Run Lighthouse on all five pages. | Each accessibility score is at least 90. | Not run |
+| Accessibility | Run Lighthouse on all five pages. | Each accessibility score is at least 90. | Pass |
 | Published website | Repeat navigation and interaction checks on GitHub Pages. | Pages, images, styles, and scripts load correctly. | Not run |
