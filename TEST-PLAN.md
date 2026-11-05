@@ -7,7 +7,7 @@ For failures, describe the problem and record the result after fixing it.
 |---|---|---|---|
 | Navigation | Click every navigation link and the SM. logo on each page. | Correct page opens; current page is highlighted. | Pass |
 | Phone layout | Check every page at 390 pixels wide. | Text and images fit without horizontal scrolling. | Pass |
-| Laptop layout | Check every page at 1280 pixels wide. | Content is readable and navigation is visible. | Not run |
+| Laptop layout | Check every page at 1280 pixels wide. | Content is readable and navigation is visible. | Pass |
 | Mobile menu | Below 600 pixels, open and close Menu on each page. | Links appear and disappear; Escape closes the menu. | Pass |
 | Project images | Open each of the six screenshots. | The correct image appears larger and closes with Close or Escape. | Not run |
 | Keyboard access | Use Tab, Shift+Tab, Enter, and Space on buttons. | Focus is visible, controls work, and there is no keyboard trap. | Not run |
