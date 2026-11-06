@@ -16,5 +16,6 @@ For failures, describe the problem and record the result after fixing it.
 | T9 | Image sizes | Inspect all project image files. | Every image is below 500 KB. | Pass |
 | T10 | Accessibility | Run Lighthouse on all five pages. | Each accessibility score is at least 90. | Pass |
 | T11 | Published website | Repeat navigation and interaction checks on GitHub Pages. | Pages, images, styles, and scripts load correctly. | Pass |
+| T12 | Browser console | Open each of the five live GitHub Pages pages in Chrome. Open DevTools > Console and reload each page. At phone width, open and close the menu on every page; on Projects, open and close all six images. Check the Console after each action. | No JavaScript errors appear during page loading or interaction. | Not run |
 
 Published-site verification: all five pages, the stylesheet, script, and six images returned HTTP 200. Browser checks confirmed navigation to Projects and opening and closing an enlarged image, with focus returning to its button.
