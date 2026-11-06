@@ -15,4 +15,6 @@ For failures, describe the problem and record the result after fixing it.
 | Contact | Check the email link. | It addresses a draft to sm3996@njit.edu when an email app is configured. | Pass |
 | Image sizes | Inspect all project image files. | Every image is below 500 KB. | Pass |
 | Accessibility | Run Lighthouse on all five pages. | Each accessibility score is at least 90. | Pass |
-| Published website | Repeat navigation and interaction checks on GitHub Pages. | Pages, images, styles, and scripts load correctly. | Not run |
+| Published website | Repeat navigation and interaction checks on GitHub Pages. | Pages, images, styles, and scripts load correctly. | Pass |
+
+Published-site verification: all five pages, the stylesheet, script, and six images returned HTTP 200. Browser checks confirmed navigation to Projects and opening and closing an enlarged image, with focus returning to its button.
