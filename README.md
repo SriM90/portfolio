@@ -40,8 +40,10 @@ If you already have the repository open in VS Code, open a terminal in its folde
 
 ## Testing and project guidance
 
-- [TESTING.md](TESTING.md) contains 12 test cases, steps, expected results, and recorded outcomes.
+- [TESTING.md](TESTING.md) contains 19 test cases, steps, expected results, and recorded outcomes. Fresh Lighthouse scores for the final design are still pending.
 - [AGENTS.md](AGENTS.md) describes the site's design, coding rules, and Git workflow.
+- [DEMO.md](DEMO.md) provides a three-minute presentation plan and explanations of both JavaScript features.
+- [SUBMISSION-CHECKLIST.md](SUBMISSION-CHECKLIST.md) separates completed requirements from remaining review, audit, and submission tasks.
 
 Testing covers navigation, phone and laptop layouts, the mobile menu, image enlargement, keyboard access, contact information, image sizes, Lighthouse accessibility, deployment, and browser-console errors. Final checks should use the live GitHub Pages site as well as the local preview.
 

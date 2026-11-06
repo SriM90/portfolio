@@ -7,7 +7,7 @@ Pages:
 - index.html: introduction and navigation
 - about.html: background, education, experience, and interests
 - projects.html: three projects with screenshots
-- skills.html: programming, leadership, and communication skills
+- skills.html: CAD modeling, CAD projects, programming, leadership, and communication skills
 - contact.html: email contact information
 
 ## Design
