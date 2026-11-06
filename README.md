@@ -14,7 +14,8 @@ The five pages are Home, About Me, Projects, Skills, and Contact. The site uses 
 - Three project cards with six screenshots that visitors can enlarge and close.
 - Keyboard-accessible controls, visible focus styles, and descriptive image alt text.
 - An email contact link that opens a draft in a configured email application; there is no backend or message-sending form.
-- Consistent pale blue backgrounds, navy headings, blue accents, and white cards.
+- A dark charcoal theme with off-white text, cool-blue accents, and an engineering-inspired homepage illustration.
+- A selected-projects homepage section, larger screenshot galleries, shared footers, and skip-to-content links.
 
 ## View locally
 

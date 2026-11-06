@@ -3,108 +3,66 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore three projects in interior design analysis, weather data, and currency exchange.">
   <title>Projects | Srikar Mattegunta</title>
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
-  <nav class="navbar" aria-label="Main navigation">
-    <a class="logo" href="index.html"
-       aria-label="Srikar Mattegunta home">SM.</a>
-
-    <button
-  class="menu-toggle"
-  type="button"
-  aria-controls="nav-links"
-  aria-expanded="false"
->
-  <span aria-hidden="true">☰</span> Menu
-</button>
-
-<div class="nav-links" id="nav-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About Me</a>
-      <a href="projects.html" aria-current="page">Projects</a>
-      <a href="skills.html">Skills</a>
-      <a href="contact.html">Contact</a>
+    <nav class="navbar wrap" aria-label="Main navigation">
+      <a class="logo" href="index.html" aria-label="Srikar Mattegunta home">SM<span>.</span></a>
+      <button class="menu-toggle" type="button" aria-controls="nav-links" aria-expanded="false">
+        <span aria-hidden="true">☰</span> Menu
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="projects.html" aria-current="page">Projects</a>
+        <a href="skills.html">Skills</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+  <main id="main" class="wrap" tabindex="-1">
+    <header class="page-intro">
+      <p class="eyebrow"><span>02 /</span> SELECTED WORK</p>
+      <h1>Ideas, put into practice.</h1>
+      <p class="lead">Three projects exploring how code can help us understand design, weather, and currency data.</p>
+    </header>
+    <div class="project-list">
+      <article class="project-feature" id="interior-design">
+        <div class="project-copy"><p class="eyebrow">01 / PYTHON · DESIGN</p><h2>Interior Design Analysis</h2><p>A Python project that evaluates selected aspects of an interior design.</p><p class="project-note">Design drawings and the code behind the analysis.</p><span class="image-hint"><span aria-hidden="true">⊕</span> Select an image to enlarge</span></div>
+        <div class="project-images">
+          <img src="images/interior-design.png" alt="Interior design drawings" width="1342" height="470">
+          <img src="images/interior-design-2.png" alt="Python code for the interior design analysis" width="640" height="683">
+        </div>
+      </article>
+      <article class="project-feature" id="weather-logger">
+        <div class="project-copy"><p class="eyebrow">02 / PROGRAMMING · WEATHER API</p><h2>Weather Data Logger</h2><p>A program that captures weather data from selected cities using a weather API.</p><p class="project-note">A look at the recorded weather data and the project code.</p><span class="image-hint"><span aria-hidden="true">⊕</span> Select an image to enlarge</span></div>
+        <div class="project-images">
+          <img src="images/weather-logger.png" alt="Weather Data Logger terminal report" width="832" height="404" loading="lazy">
+          <img src="images/weather-logger-2.png" alt="Weather Data Logger project code" width="1366" height="1444" loading="lazy">
+        </div>
+      </article>
+      <article class="project-feature" id="exchange-rate">
+        <div class="project-copy"><p class="eyebrow">03 / PROGRAMMING · CURRENCY API</p><h2>Currency Exchange Rate Tracker</h2><p>A project that uses an API to retrieve exchange rates and equivalent amounts in different currencies.</p><p class="project-note">Screenshots from the currency exchange project.</p><span class="image-hint"><span aria-hidden="true">⊕</span> Select an image to enlarge</span></div>
+        <div class="project-images">
+          <img src="images/exchange-rate.png" alt="Currency Exchange Rate Tracker project screenshot" width="1632" height="1570" loading="lazy">
+          <img src="images/exchange-rate-2.png" alt="Second Currency Exchange Rate Tracker screenshot" width="1136" height="302" loading="lazy">
+        </div>
+      </article>
     </div>
-  </nav>
-</header>
- <main>
-  <h1>My Projects</h1>
-  <p>
-    Projects exploring interior design, weather data,
-    and currency exchange.
-  </p>
-
-  <div class="project-grid">
-    <article class="project-card">
-  <div class="project-images">
-  <img
-    src="images/interior-design.png"
-    alt="Interior design drawings"
-  >
-  <img
-    src="images/interior-design-2.png"
-    alt="Python code for the interior design analysis"
-  >
-</div>
-  
-      <h2>Interior Design Analysis</h2>
-      <p>
-        A Python project that evaluates selected aspects
-        of an interior design.
-      </p>
-    </article>
-
-    <article class="project-card">
-      <div class="project-images">
-        <img
-          src="images/weather-logger.png"
-          alt="Screenshot of my Weather Data Logger project"
-        >
-        <img
-          src="images/weather-logger-2.png"
-          alt="Second screenshot of my Weather Data Logger project"
-        >
-      </div>
-      <h2>Weather Data Logger</h2>
-      <p>
-        A program that captures weather data from selected
-        cities using a weather API.
-      </p>
-    </article>
-
-    <article class="project-card">
-      <div class="project-images">
-        <img
-          src="images/exchange-rate.png"
-          alt="Screenshot of my Currency Exchange Rate Tracker project"
-        >
-        <img
-          src="images/exchange-rate-2.png"
-          alt="Second screenshot of my Currency Exchange Rate Tracker project"
-        >
-      </div>
-      <h2>Currency Exchange Rate Tracker</h2>
-      <p>
-        A project that uses an API to retrieve exchange
-        rates and equivalent amounts in different currencies.
-      </p>
-    </article>
-  </div>
-</main>
-<dialog id="image-dialog" aria-label="Enlarged project screenshot">
-  <form method="dialog">
-    <button class="image-close" type="submit">Close</button>
-  </form>
-
-  <img
-    id="full-image"
-    src="images/interior-design.png"
-    alt="Interior design drawings"
-  >
-</dialog>
+    <dialog id="image-dialog" aria-label="Enlarged project screenshot">
+      <form method="dialog"><button class="image-close" type="submit">Close <span aria-hidden="true">×</span></button></form>
+      <img id="full-image" src="images/interior-design.png" alt="Interior design drawings">
+    </dialog>
+  </main>
+  <footer class="site-footer wrap">
+    <a class="footer-name" href="index.html">Srikar Mattegunta<span>.</span></a>
+    <p>Engineering curiosity. Practical ideas.</p>
+    <a href="contact.html">Get in touch <span aria-hidden="true">↗</span></a>
+  </footer>
 </body>
 </html>

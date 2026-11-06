@@ -3,6 +3,16 @@
 Change "Not run" to "Pass" or "Fail" only after testing.
 For failures, describe the problem and record the result after fixing it.
 
+## Redesign verification
+
+The dark-theme redesign changes the layout and styling. The table below preserves the previous version's test results; they are not a claim that every test has been rerun on the redesigned live site.
+
+Local redesign checks: all five pages fit at 320px, 390px, and 1280px without horizontal overflow; each has one h1 and the correct current navigation link. All local links and image paths resolve, all images have alt text and remain below 500 KB, and no inline CSS was introduced. Mobile menu opening and Escape closing were checked on every page. The image viewer's Escape closing and focus return were checked. No browser JavaScript errors were recorded during these checks. Primary text/background color pairs exceed 4.5:1 contrast.
+
+Before submission, repeat Lighthouse Accessibility on all five redesigned live pages and the complete live-site navigation/keyboard checklist. The earlier Lighthouse scores apply to the previous design.
+
+## Previous version results
+
 | ID | Test | Action | Expected result | Result |
 |---|---|---|---|---|
 | T1 | Navigation | Click every navigation link and the SM. logo on each page. | Correct page opens; current page is highlighted. | Pass |

@@ -11,12 +11,14 @@ Pages:
 - contact.html: email contact information
 
 ## Design
-- Pale blue background: #f3f7ff
-- Navy headings: #172554
-- Blue accents: #1d4ed8
-- White cards with rounded corners
-- Arial, Helvetica, or a sans-serif fallback
-- Readable spacing and layouts that adapt to phones and laptops
+- Dark charcoal background: #0e1117; raised surfaces: #151b25
+- Off-white headings: #eef2f9; secondary text: #aab5c7
+- Cool blue accents: #91b4ff, with dark text on filled blue buttons
+- Engineering-inspired layout, fine borders, restrained corners, and generous spacing
+- Arial/Helvetica body and headings, monospace labels, and a Georgia italic accent
+- Homepage uses a decorative inline SVG engineering diagram, not a project claim
+- Larger project showcases retain two side-by-side screenshots with image enlargement
+- Responsive phone/laptop layouts, shared footer, and a keyboard skip link on every page
 
 ## Code Rules
 - Use plain HTML, CSS, and JavaScript. No frameworks.
