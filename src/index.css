@@ -1,0 +1,205 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* Dark engineering palette. One accent only. */
+:root {
+  --bg: #0e1117;
+  --surface: #151b25;
+  --surface-2: #1a2230;
+  --line: rgba(170, 181, 199, 0.12);
+  --line-strong: rgba(170, 181, 199, 0.22);
+  --heading: #eef2f9;
+  --body: #aab5c7;
+  --accent-blue: #91b4ff;
+
+  --radius: 1.25rem;
+  --background: var(--bg);
+  --foreground: var(--heading);
+  --card: var(--surface);
+  --card-foreground: var(--heading);
+  --popover: var(--surface);
+  --popover-foreground: var(--heading);
+  --primary: var(--accent-blue);
+  --primary-foreground: #0b1020;
+  --secondary: var(--surface-2);
+  --secondary-foreground: var(--heading);
+  --muted: var(--surface-2);
+  --muted-foreground: var(--body);
+  --accent: rgba(145, 180, 255, 0.1);
+  --accent-foreground: var(--heading);
+  --destructive: #ff8a8a;
+  --border: var(--line);
+  --input: var(--line-strong);
+  --ring: var(--accent-blue);
+}
+
+@theme inline {
+  --font-sans: "Geist", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, monospace;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-heading: var(--heading);
+  --color-body: var(--body);
+  --color-blue: var(--accent-blue);
+  --radius-sm: calc(var(--radius) - 8px);
+  --radius-md: calc(var(--radius) - 6px);
+  --radius-lg: calc(var(--radius) - 4px);
+  --radius-xl: var(--radius);
+  --radius-2xl: calc(var(--radius) + 8px);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    background: var(--bg);
+    color-scheme: dark;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-background font-sans text-body antialiased;
+    font-feature-settings: "ss01", "cv11";
+    text-rendering: optimizeLegibility;
+  }
+  ::selection {
+    background: rgba(145, 180, 255, 0.3);
+    color: var(--heading);
+  }
+  h1, h2, h3, h4 {
+    @apply text-heading;
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  :focus-visible {
+    outline: 2px solid var(--accent-blue);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+  img {
+    user-select: none;
+    -webkit-user-drag: none;
+  }
+}
+
+/* Lenis */
+html.lenis, html.lenis body { height: auto; }
+.lenis:not(.lenis-autoToggle).lenis-stopped { overflow: clip; }
+.lenis [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-smooth iframe { pointer-events: none; }
+
+/* Glass, overlays only */
+.glass {
+  background: rgba(14, 17, 23, 0.62);
+  backdrop-filter: saturate(160%) blur(18px);
+  -webkit-backdrop-filter: saturate(160%) blur(18px);
+  border: 1px solid var(--line);
+}
+
+/* Blueprint grid: Swiss baseline behind the hero */
+.blueprint-grid {
+  background-image:
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, #000 30%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, #000 30%, transparent 80%);
+}
+
+.tile {
+  @apply rounded-2xl border bg-surface;
+}
+
+.eyebrow {
+  @apply font-mono text-[0.72rem] tracking-[0.18em] uppercase text-body;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 100;
+  @apply rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground;
+}
+.skip-link:focus { top: 1rem; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Accent grid revealed around the cursor (masked in JS) */
+.grid-lines-accent {
+  background-image:
+    linear-gradient(rgba(145, 180, 255, 0.42) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(145, 180, 255, 0.42) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* Tile spotlight: a faint glow and a lit border that follow the cursor */
+.tile {
+  position: relative;
+  isolation: isolate;
+}
+.tile::before,
+.tile::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.tile::before {
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(420px circle at var(--x, 50%) var(--y, 50%), rgba(145, 180, 255, 0.075), transparent 45%);
+}
+.tile::after {
+  inset: -1px;
+  padding: 1px;
+  background: radial-gradient(260px circle at var(--x, 50%) var(--y, 50%), rgba(145, 180, 255, 0.55), transparent 60%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+}
+@media (hover: hover) and (pointer: fine) {
+  .tile:hover::before,
+  .tile:hover::after { opacity: 1; }
+}
+
+/* Side rulers */
+.ruler {
+  background-image:
+    linear-gradient(to bottom, rgba(170, 181, 199, 0.28) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(170, 181, 199, 0.12) 1px, transparent 1px);
+  background-size: 14px 64px, 7px 8px;
+  background-repeat: repeat-y;
+}
+.ruler-left { background-position: right 0 top var(--ruler-y, 0px), right 0 top var(--ruler-y, 0px); }
+.ruler-right { background-position: left 0 top var(--ruler-y, 0px), left 0 top var(--ruler-y, 0px); }
